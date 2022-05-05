@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lytMain"
+    android:layout_width="match_parent"
+    android:layout_height="232dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--<com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/imgcategory"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin_5dp" />-->
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/imgcategory"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_margin="@dimen/margin_5dp" />
+
+        <TextView
+            android:id="@+id/txttitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgcategory"
+            android:padding="@dimen/dimen_12dp"
+            android:maxLines="2"
+            android:minLines="1"
+            android:layout_marginBottom="@dimen/margin_10dp"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "30508629478",
+    "project_id": "first-joy",
+    "storage_bucket": "first-joy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30508629478:android:4c7069aa8b3c7e927c6a27",
+        "android_client_info": {
+          "package_name": "dhdeveloper.com.firstjoy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30508629478-uq39nul8dttnunn9vr6hj0kmre3bfqjs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dhdeveloper.com.firstjoy",
+            "certificate_hash": "94ffa0243a0bb9022cf9715f94387082e5e3b70e"
+          }
+        },
+        {
+          "client_id": "30508629478-6m39sinc09cpvup2ck92vi436tok479d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPdfYv-5QLsIL9f2_LOyNEgXsz58XHG2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30508629478-6m39sinc09cpvup2ck92vi436tok479d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

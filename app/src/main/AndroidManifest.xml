@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="dhdeveloper.com.firstjoy">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="dhdeveloper.com.firstjoy.helper.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:label,android:allowBackup,android:usesCleartextTraffic">
+
+        <activity android:name="dhdeveloper.com.firstjoy.activity.NotificationList" />
+
+        <activity android:name="dhdeveloper.com.firstjoy.activity.DrawerActivity" />
+
+        <activity android:name="dhdeveloper.com.firstjoy.activity.WebViewActivity" />
+        <activity android:name="dhdeveloper.com.firstjoy.activity.MapActivity" />
+        <activity android:name="dhdeveloper.com.firstjoy.activity.OrderListActivity" />
+        <activity android:name="dhdeveloper.com.firstjoy.activity.TrackerDetailActivity" />
+        <activity android:name="dhdeveloper.com.firstjoy.activity.OrderPlacedActivity"/>
+        <activity android:name="dhdeveloper.com.firstjoy.activity.CheckoutActivity" />
+        <activity android:name="dhdeveloper.com.firstjoy.activity.FullScreenViewActivity" />
+        <activity android:name="dhdeveloper.com.firstjoy.activity.ProductDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="dhdeveloper.com.firstjoy.activity.SplashActivity" />
+        </activity>
+        <activity
+            android:name="dhdeveloper.com.firstjoy.activity.SearchActivity"
+            android:launchMode="singleTop" />
+        <activity android:name="dhdeveloper.com.firstjoy.activity.ProfileActivity" />
+        <activity android:name="dhdeveloper.com.firstjoy.activity.LoginActivity" />
+        <activity android:name="dhdeveloper.com.firstjoy.activity.SplashActivity"
+            android:launchMode="singleTask"
+            android:hardwareAccelerated="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter
+                android:autoVerify="true"
+                tools:targetApi="m">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="ekart.wrteam.in"
+                    android:pathPrefix="/refer"
+                    android:scheme="https" />
+                <data
+                    android:host="ekart.wrteam.in"
+                    android:pathPrefix="/itemdetail"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name="dhdeveloper.com.firstjoy.activity.MainActivity" />
+        <activity android:name="dhdeveloper.com.firstjoy.activity.ReferEarnActivity" />
+        <activity android:name="dhdeveloper.com.firstjoy.activity.SubCategoryActivity" />
+        <activity android:name="dhdeveloper.com.firstjoy.activity.FavouriteActivity"  />
+        <activity android:name="dhdeveloper.com.firstjoy.activity.CartActivity" />
+        <activity android:name="dhdeveloper.com.firstjoy.activity.ProductListActivity" />
+        <activity android:name="dhdeveloper.com.firstjoy.activity.CategoryActivity"  />
+        <activity android:name="dhdeveloper.com.firstjoy.activity.PayPalWebActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <receiver android:name=".helper.SMSBroadcastReceiver"
+            android:exported="true"
+            android:permission="TODO">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="dhdeveloper.com.firstjoy.helper.MyFirebaseMessagingService"
+            android:exported="true"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name="dhdeveloper.com.firstjoy.helper.GPSTracker" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyClsXbvw7dfKDHSQOO7lfNeX59O9-rsLRk" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>
